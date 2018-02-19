@@ -13,6 +13,22 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,12 +62,28 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F292CFF2B80E8EB82065552CC8F649A1A89D1EEA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>School Records_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,11 +104,108 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Administrator Login.Designer.vb">
+      <DependentUpon>Administrator Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Administrator Panel.Designer.vb">
+      <DependentUpon>Administrator Panel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator Panel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="balance.Designer.vb">
+      <DependentUpon>balance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="balance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Student.Designer.vb">
+      <DependentUpon>Delete Student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delete Student.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enter Marks.Designer.vb">
+      <DependentUpon>Enter Marks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Enter Marks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enter Subject Marks.Designer.vb">
+      <DependentUpon>Enter Subject Marks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Enter Subject Marks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Individual Results.Designer.vb">
+      <DependentUpon>Individual Results.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Individual Results.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newStudent.Designer.vb">
+      <DependentUpon>newStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payfees.Designer.vb">
+      <DependentUpon>payfees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payfees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchStudent.Designer.vb">
+      <DependentUpon>searchStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.vb">
+      <DependentUpon>SignUpForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Progress.Designer.vb">
+      <DependentUpon>Student Progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student Progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatemarks.Designer.vb">
+      <DependentUpon>updatemarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatemarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateStudent.Designer.vb">
+      <DependentUpon>updateStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updateStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.Designer.vb">
+      <DependentUpon>welcome.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,6 +225,57 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Administrator Login.resx">
+      <DependentUpon>Administrator Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator Panel.resx">
+      <DependentUpon>Administrator Panel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="balance.resx">
+      <DependentUpon>balance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Student.resx">
+      <DependentUpon>Delete Student.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enter Marks.resx">
+      <DependentUpon>Enter Marks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enter Subject Marks.resx">
+      <DependentUpon>Enter Subject Marks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Individual Results.resx">
+      <DependentUpon>Individual Results.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newStudent.resx">
+      <DependentUpon>newStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payfees.resx">
+      <DependentUpon>payfees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchStudent.resx">
+      <DependentUpon>searchStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Progress.resx">
+      <DependentUpon>Student Progress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatemarks.resx">
+      <DependentUpon>updatemarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateStudent.resx">
+      <DependentUpon>updateStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -104,6 +284,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -114,6 +295,22 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="School Records_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_2017-07-07-14-53-39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
